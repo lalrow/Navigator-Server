@@ -1,0 +1,39 @@
+# FastAPI and server dependencies
+fastapi>=0.115.12
+uvicorn>=0.34.2
+python-multipart
+python-dotenv
+
+# OpenAI and LLM dependencies
+openai
+langchain-community>=0.3.30
+langchain-openai>=0.3.35
+langchain-experimental>=0.3.4
+langgraph>=0.6.10
+
+# Vector database and retrieval
+qdrant-client>=1.9,<2.0
+langchain-qdrant>=0.2.1
+langchain-cohere>=0.4.6
+
+# Evaluation and metrics
+ragas==0.2.10
+datasets>=2.0.0
+
+# Search API
+tavily-python>=0.7.12
+
+# PDF processing
+pypdf2>=3.0.1
+pymupdf>=1.26.4
+reportlab>=4.4.4
+
+# Utilities
+numpy
+pydantic>=2.11.4
+jupyter>=1.1.1
+
+# Development dependencies (for testing)
+pytest>=8.0.0
+pandas>=2.0.0
+

@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Node modules (frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Frontend build
+frontend/dist/
+frontend/.next/
+frontend/out/
+
+# Environment files (will be set in HuggingFace)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+backend.log
+frontend.log
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+rag.db
+
+# Qdrant data (will be created fresh)
+qdrant_local/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Test files
+tests/
+test_pdfs/
+create_test_pdfs.py
+
+# Scripts
+scripts/
+run-tests.sh
+start-*.sh
+
+# Temporary files
+tmp/
+temp/
+.cursor/
+
