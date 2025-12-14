@@ -2,7 +2,6 @@ from qdrant_client import QdrantClient
 from langchain_openai import OpenAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from langchain_cohere import CohereRerank
-from langchain.retrievers.contextual_compression import ContextualCompressionRetriever
 import os
 import time
 from typing import List
