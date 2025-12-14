@@ -200,6 +200,10 @@ async def startup_event():
 
         if not has_vectors:
             print("📚 Initializing with Bees PDF ...")
+            
+            # Close the client to release the file lock before running subprocess
+            del client
+            
             # Resolve absolute repo root and script/data paths
             repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
             retriever_script = os.path.join(repo_root, "projects", "diagnostician-agent", "retriever", "load_pdf_to_qdrant.py")
