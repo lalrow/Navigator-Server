@@ -455,16 +455,18 @@ async def search_query(request: SearchRequest):
 async def evaluate_answer(request: EvaluateRequest):
     """Evaluate student answer using always-on Agentic Diagnostician Agent"""
     try:
-        if not request.api_key:
+        # Use environment variable if api_key not provided
+        api_key = request.api_key or os.getenv("OPENAI_API_KEY")
+        if not api_key:
             raise HTTPException(status_code=400, detail="Missing api_key")
 
-        agent_graph = build_graph_with_api_key(request.api_key)
+        agent_graph = build_graph_with_api_key(api_key)
 
         state = {
             "question": request.question,
             "answer": request.answer,
             "context": request.context or "",
-            "api_key": request.api_key,
+            "api_key": api_key,
         }
 
         result = agent_graph.invoke(state, config={"configurable": {"thread_id": str(uuid.uuid4())}})
